@@ -1,0 +1,11 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/css/general.css')
+		link(rel='icon', type='image/png', href='/images/logo.png')
+		meta(name='viewport' ,content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+	body.fix
+		block content
+	script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+	script(src='/js/main.js')

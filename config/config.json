@@ -1,0 +1,16 @@
+{
+	"port": 3010,
+	"env": "prod",
+	"mongoose": {
+		"uri": "mongodb://localhost/220promap"
+	},
+	"session": {
+		"secret": "baboby",
+		"key": "session",
+		"cookie": {
+			"path": "/",
+			"httpOnly": true,
+			"maxAge": null
+		}
+	}
+}

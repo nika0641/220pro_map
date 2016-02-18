@@ -1,0 +1,18 @@
+extends ../layouts/layout-fix
+
+block content
+	.main-page-wrapper
+		.main-page-container
+			.logo-block
+				.logo-container
+					img(src='/images/logo.jpg')
+					img.logo-rotate.js-logo-rotate(src='/images/logo-socket.png')
+			h1 Кто ты?
+			br
+			form.login-form.t-center.js-login-form(action='/login', method='post')
+				.form-group
+					input.form-control(name='login', placeholder='логин')
+				.form-group
+					input.form-control(name='password', placeholder='пароль', type='password')
+				.form-group
+					button.btn.btn-info(type='submit') отправить

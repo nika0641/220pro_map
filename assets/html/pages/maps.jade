@@ -1,0 +1,25 @@
+extends ../layouts/layout
+
+block content
+	.page-wrapper
+		.page-container.t-center
+			h1 Список загруженных ранее маршрутов
+			br
+			.table-responsive.maps-list
+				table.table.table-striped
+					thead
+						tr
+							th Название
+							th Дата загрузки
+							th Действия
+					tbody
+						each map in maps
+							tr
+								td
+									if map.name
+										a(href='/map/#{ map.id }')= map.name
+									else
+										a(href='/map/#{ map.id }') от #{ map.getDate() }
+								td= map.getDateCreated()
+								td
+									a.js-remove-map(href='/map/#{ map.id }/remove') удалить

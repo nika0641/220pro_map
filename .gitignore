@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+public
+storage
+tmp
+cache
+rev-manifest.json
+views

@@ -1,0 +1,20 @@
+extends ../layouts/layout-fix
+
+block content
+	.wrapper
+		.map-container
+			#map(data-edit-mode='#{ !!admin }')
+	.orders-block.js-orders-container(data-orders='#{JSON.stringify(orders)}', data-map-id='#{mapId}')
+		each order, index in orders
+			.order-block.media.js-order
+				.order-point-block.placemark-border-color(class='color-#{order.colorNumber}').pull-left
+					.order-point
+						span.order-point-number= order.index
+				.order-info-block.media-body
+					h4.order-number #{order.number}
+					h5.order-time #{order.time}
+					p.order-address #{order.address}
+					p.order-comment #{order.comment}
+	if admin
+		.save-block
+			button.btn.btn-info.js-save-button сохранить

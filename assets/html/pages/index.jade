@@ -1,0 +1,17 @@
+extends ../layouts/layout-fix
+
+block content
+	.main-page-wrapper
+		.main-page-container
+			.logo-block
+				.logo-container
+					img(src='/images/logo.jpg')
+					img.logo-rotate.js-logo-rotate(src='/images/logo-socket.png')
+			h1 Загрузка маршрута
+			br
+			form.js-file-upload-form.hidden(action='/parsexls', method='post', enctype='multipart/form-data')
+				.form-group
+					span.btn.btn-info.btn-file Добавить файл
+						input.btn(type='file', name='file')
+			a.old-files-block(href='/maps') Загруженные ранее маршруты
+			a.logout(href='/logout') Выйти
